@@ -1,0 +1,9 @@
+<h2>Movies</h2>
+<mat-nav-list>
+  <mat-list-item *ngFor="let movie of (movies$ | async).movies" routerLink="/movies/{{movie.id}}">
+    <span>{{movie.name}}</span>
+    <star-rating [starType]="'svg'" [rating]="movie.rate / 2"></star-rating>
+  </mat-list-item>
+</mat-nav-list>
+
+<a [routerLink]="['/']">Back to Search</a>

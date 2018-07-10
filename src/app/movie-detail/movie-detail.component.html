@@ -1,0 +1,11 @@
+<p *ngIf="!movie">Sorry, the movie you're looking for is not here.</p>
+<div *ngIf="movie">
+  <mat-card>
+    <mat-card-title>{{movie.name}}</mat-card-title>
+    <img mat-card-img src="/assets/images/movie-covers/{{movie.img}}"/>
+    <star-rating [starType]="'svg'" [rating]="movie.rate / 2"></star-rating>
+    <mat-card-content>{{movie.description}}</mat-card-content>
+    <mat-card-content>Running time: {{movie.length}}</mat-card-content>
+    <app-genres [genres]="movie.genres"></app-genres>
+  </mat-card>
+</div>

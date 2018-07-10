@@ -1,0 +1,7 @@
+<form (ngSubmit)="onSubmit()" #searchForm="ngForm">
+  <mat-form-field>
+    <input id="movie" matInput [(ngModel)]="search" name="q" type="search" placeholder="What movie are you looking for?">
+  </mat-form-field>
+</form>
+
+<app-genres [genres]="genres"></app-genres>
